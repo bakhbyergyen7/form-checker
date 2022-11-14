@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Login </title>
+    <link rel="stylesheet" href="style1.css">
+    <script type="text/javascript" src="formChecker.js"></script>
+</head>
+<body>
+<h1> Login Page </h1>
+<form action="customerBackend.php" method="post" id="uname">
+    <div class="imgcontainer">
+        <img src="avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="email" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+
+<form action="customerBackend.php" name="cart" method="post" id="cart" onsubmit="return formChecker()">
+
+    <h3> Please choose the products you want to buy </h3>
+
+    <div>
+        <label for="name">Gatorade: $1.50 </label>
+        <input type="number" name="gatorade" id="gatorade" value=0 min="0" required><br>
+    </div>
+    <div>
+        <label for="name">Sprite: $2.50 </label>
+        <input type="number" name="sprite" id="sprite" value=0 min="0" required><br>
+    </div>
+    <div>
+        <label for="name">Sparkling Water: $1.00 </label>
+        <input type="number" name="sparkling-water" id="sparkling-water" value=0 min="0" required><br>
+    </div>
+
+
+    <form action="customerBackend.php" method="post" id="shipping">
+
+    <h3> Please choose your shipping method </h3>
+    <div>
+        <input type="radio" name="shipping-answers" id="shipping-answers-A" value="A" required/>
+        <label for="shipping-answers-A">Free 7 day </label>
+    </div>
+
+    <div>
+        <input type="radio" name="shipping-answers" id="shipping-answers-B" value="B" required/>
+        <label for="shipping-answers-B">$50.00 over night </label>
+    </div>
+
+    <div>
+        <input type="radio" name="shipping-answers" id="shipping-answers-C" value="C" required/>
+        <label for="shipping-answers-C"> $5.00 three day </label>
+    </div>
+
+    <label>
+        <input type="checkbox" checked="checked" name="remember">Remember me
+    </label><br>
+    <button type="submit">Login</button>
+    <button type="reset" value="Reset">Reset</button>
+    </div>
+</form>
+</body>
+</html>
